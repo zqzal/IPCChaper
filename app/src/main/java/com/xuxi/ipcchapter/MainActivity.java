@@ -8,6 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.xuxi.ipcchapter.model.User;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "MainActivity";
@@ -24,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button1.setOnClickListener(this);
         Button button2 = findViewById(R.id.button2);
         button2.setOnClickListener(this);
+
+        Button button = findViewById(R.id.button3);
+        button.setOnClickListener(this);
+
     }
 
     @Override
@@ -37,8 +49,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent1 = new Intent(this,ThirdActivity.class);
                 startActivity(intent1);
                 break;
+            case R.id.button3:
+                break;
+
                 default:
                     break;
         }
     }
+
+
 }
